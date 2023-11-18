@@ -43,6 +43,7 @@ app.post('/api', (req, res) => {
     res.status(201).json(nproducto);
 });
 
+//actualiacion por id
 app.put('/api/:id', (req, res) => {
     const productoid = parseInt(req.params.id);
     const uproducto = req.body;
@@ -52,6 +53,7 @@ app.put('/api/:id', (req, res) => {
     res.json(uproducto);
 });
 
+//borrar datos por id
 app.delete('/api/:id', (req,res) => {
     const productoid = parseInt(req.params.id);
     data = data.filter(item => item.id !== productoid);
